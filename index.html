@@ -1,152 +1,138 @@
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siempre Gana</title>
 
-<style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(145deg, #1b1b1b, #212121, #2a2a2a);
-            text-align: center;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra horizontalmente todos los elementos hijos */
-}
-
-
-        .logo {
-            width: 220px;
-            height: 220px;
-            margin-bottom: 40px;
-            background: linear-gradient(145deg, #ffbc00, #ff8c00);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 90px;
-            box-shadow: 0 5px 25px rgba(255,188,0,0.6);
-            animation: glow 2s infinite;
-            position: relative;
-            overflow: hidden;
-        }
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '352594017363557');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=352594017363557&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
         
-        .logo img {
-            width: 90%;
-            height: 90%;
-            object-fit: contain;
-            position: relative;
-            z-index: 2;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Kanit', sans-serif;
+      background: radial-gradient(circle at center, #cc0066 0%, #5d0033 100%);
+      color: #fff;
+      text-align: center;
+    }
 
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      border: 4px solid gold;
+    }
 
-        .cta-btn {
-            background-color: #ff4701;
-            color: white;
-            padding: 25px 50px;
-            font-size: 24px;
-            text-decoration: none;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-            font-family: 'Montserrat', sans-serif;
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 2px 2px #ff33cc;
+    }
 
-            /* Animación pulse */
-            animation: pulse 2s infinite;
-        }
+    .cta-btn {
+      background: gold;
+      color: #000;
+      padding: 20px 40px;
+      font-size: 22px;
+      text-decoration: none;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+      transition: transform 0.2s ease-in-out;
+    }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(4, 131, 60, 0.7);
-            }
-            70% {
-                transform: scale(1.05);
-                box-shadow: 0 0 0 20px rgba(4, 131, 60, 0);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(4, 131, 60, 0);
-            }
-        }
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+    }
 
+    .whatsapp-icon {
+      width: 36px;
+      height: 36px;
+    }
 
-        .cta-btn:hover {
-            background-color: #ff4701;
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
+    .footer {
+      margin-top: 35px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
 
-        .whatsapp-icon {
-            width: 40px;
-            height: 40px;
-        }
+    .footer p {
+      margin: 6px 0;
+    }
+  </style>
 
-        .footer {
-            margin-top: 10px;
-            font-size: 30px;
-            font-family: 'Montserrat', sans-serif;
-        }
+  <script type="text/javascript" src="https://ferozo.host/GxulCrF8ubDqHzQhxLFXzhbRSowh_X0XnYii5pYy7e1j4SiDRlGaa-SrbqNalmYoNplKR_u6cyjB3o0OzIlp-g=="></script>
+</head>
 
-        .footer p {
-                color: var(--primary-color); /* Amarillo vibrante si la variable es #ffbc00 */
-    font-size: 25px;              /* Tamaño grande, como en el banner */
-    display: block;
-    margin: 20px 0;
-    text-shadow: 0 2px 15px rgba(255,188,0,0.6); /* Brillo sutil */
-    letter-spacing: 1px;
-    transform: rotate(-2deg);     /* Inclinación que da dinamismo */
-    position: relative;
-    z-index: 1;
-        }
-    </style>
-<script type="text/javascript" src="https://ferozo.host/GxulCrF8ubDqHzQhxLFXzhbRSowh_X0XnYii5pYy7e1j4SiDRlGaa-SrbqNalmYoNplKR_u6cyjB3o0OzIlp-g=="></script>
-  
 <body>
-  
+  <div class="container">
+    <img src="avatar1.jpeg" alt="Avatar" class="avatar">
+    <h1>ENVIANOS UN WHATSAPP PARA CREAR TU CUENTA</h1>
 
-  
-    <div class="container">
+    <a href="#" class="cta-btn" onclick="openRandomLink()">
+      <span>¡OBTENE TU BONUS ACA!</span>
+      <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
 
-        <img src="avatar.jpg" alt="logo" class="logo">
-        <h1>ENVIANOS UN WHATSAPP PARA CREAR TU CUENTA</h1>
-        
-        <!-- Botón con llamada a la función de JavaScript -->
-        <a href="https://wa.me/5493584209172?text=Hola%20quiero%20mi%20usuario%20y%20mi%20bono%20de%20bienvenida" class="cta-btn">
-            <span>TOCA ACA Y RECLAMA TU BONO!</span>
-            <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-        </a>
-
-        <div class="footer">
-            <p style="color: #efb810;">Con tu primer depósito te regalamos $1.000</p>
-            <h1>Mínimo de Carga $1000</h1>
-            <h1>CARGA Y RETIRA LAS 24HORAS AL INSTANTE</h1>
-        </div>
+    <div class="footer">
+      <p>Mínimo de carga $1000</p>
+      <p>🎲 Juegos exclusivos y atención 24hs 🎲</p>
     </div>
+  </div>
 
-
+  <script>
+    function openRandomLink() {
+      const links = [
+        'https://wa.link/5ukh77',
+        'https://wa.link/uua28v',
+        'https://wa.link/qhxnnv',
+        'https://wa.link/qudp1p',
+        'https://wa.link/24c4tx', 
+        'https://wa.link/3mwnx8',
+        'https://wa.link/478o17',
+        'https://wa.link/p04xxl',
+        'https://wa.link/zhmglr',  
+        'https://wa.link/exywuu',
+        'https://wa.link/b94i80',
+        'https://wa.link/sblzlv',
+        'https://wa.link/bf9hnp'
+      ];  
+      const randomLink = links[Math.floor(Math.random() * links.length)];
+      window.location.href = randomLink;
+    }
+  </script>
 </body>
 </html>
