@@ -71,6 +71,7 @@ src="https://www.facebook.com/tr?id=352594017363557&ev=PageView&noscript=1"
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
       transition: transform 0.2s ease-in-out;
+      animation: pulse 2s infinite;
     }
 
     .cta-btn:hover {
@@ -92,6 +93,23 @@ src="https://www.facebook.com/tr?id=352594017363557&ev=PageView&noscript=1"
     .footer p {
       margin: 6px 0;
     }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); /* dorado */
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
+
+    
   </style>
 
   <script type="text/javascript" src="https://ferozo.host/GxulCrF8ubDqHzQhxLFXzhbRSowh_X0XnYii5pYy7e1j4SiDRlGaa-SrbqNalmYoNplKR_u6cyjB3o0OzIlp-g=="></script>
